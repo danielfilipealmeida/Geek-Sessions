@@ -1,0 +1,11 @@
+README - Geek Sessions Code
+2011 Daniel Almeida. 
+danielf.almeida@gmail.com
+
+
+PureData_001:
+Primeira apresentação sobre Pure Data: Misturador de vídeo de 2 canais
+com efeito Motion Blur e Brighness/Contrast.
+
+Os videos usam o codec DXV Compressor. Podem-se usar quaisquer outros 
+videos.
