@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Node Stack | Geek Sessions | Daniel Almeida</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Node.js Stack</h1>
+					<h3>Geek Sessions | Faro | 2015/09/25</h3>
+					<p>
+						<a href="http://danielfilipea.net">Daniel Almeida</a>
+					</p>
+					<ul>
+						<li>Email: <a href='mailto:danielf.almeida@gmail.com'>danielf.almeida@gmail.com</a></li>
+						<li>Github: <a href='https://github.com/danielfilipealmeida/'>https://github.com/danielfilipealmeida/</a>
+							<li>Twitter: <a href="http://twitter.com/danielfilipea">@danielfilipea</a>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Node.js | 1</h2>
+
+					<h3>O que é?</h3>
+
+					<p>É um ambiente de execução (runtime environent) implementado sobre o V8 (Google) que permite executar código Javascript na linha de comando.</p>
+
+					<p>É rápido, eficiente, controlado por eventos e com operações de Input e Output não bloqueantes.</p>
+
+					<p>Pensado para funcionar totalmente de forma assíncrona.</p>
+
+				</section>
+
+				<section>
+					<h2>Node.js | 2</h2>
+
+					<h3>O que podemos fazer ?</h3>
+
+					<ul>
+						<li>Utilizar Javascript para programar servidores;</li>
+						<li>Operações I/O muito eficientes;</li>
+						<li>Acesso ao Sistema de Ficheiros e Bases de Dados de forma directa;</li>
+						<li>Utilizar o sistema de pacotes nativo (npm) para adicionar livrarias e extender as suas funcionalidades;</li>
+					</ul>
+
+				</section>
+
+<!--
+				<section>
+					<ul>
+						<li>Express.js</li> x
+						<li>body-parser</li> x
+						<li>cookie-parser</li>
+
+						<li>async</li> x
+						<li>chokidar</li>
+						<li>winston</li> x
+						<li>hbs</li>
+
+						<li>connect-busboy</li> x
+					</ul>
+
+					And also:
+					<ul>
+						<li>CoffeeScript</li>
+						<li>Mocha</li>
+						<li>istanbul</li>
+					</ul>
+				</section>
+-->
+
+				<section>
+					<h2>Express.js</h2>
+					<p>Framework minimal para routing e que permite "crescer" através da utilização de "Middleware"</p>
+
+					<p><strong>URL:</strong> <a href='http://expressjs.com'>http://expressjs.com</a></p>
+
+					<code>
+						$ npm install express
+					</code>
+				</section>
+
+
+				<!-- HANDLEBARS -->
+
+				<section>
+					<h2>Handlebars <small>(1)</small>, HBS <small>(2)</small></h2>
+					<p>Livraria de Templating para Javascript <small>(1)</small> e View Engine para o Express<small>(2)</small>.</p>
+
+					<p>Urls:</p>
+					<p>
+						<ul>
+							<li><a href='http://handlebarsjs.com'>http://handlebarsjs.com</a></li>
+							<li><a href='https://github.com/donpark/hbs'>https://github.com/donpark/hbs</a></li>
+						</ul>
+					</p>
+
+
+					<code>
+						$ npm install hbs
+					</code>
+				</section>
+
+
+
+				<!-- SEQUELIZE.js -->
+
+				<section>
+					<h2>Sequelize.js | 1</h2>
+					<p>ORM para MySQL, PostgreSQL, MariaDB, Sqlite e Microsoft SQL Server baseado em Promises.</p>
+
+					<p>Urls:</p>
+					<p>
+						<ul>
+							<li><a href='http://docs.sequelizejs.com'>http://docs.sequelizejs.com</a></li>
+							<li><a href='https://github.com/sequelize/sequelize'>https://github.com/sequelize/sequelize</a></li>
+						</ul>
+					</p>
+
+
+					<code>
+						$ npm install sequelize
+					</code>
+				</section>
+
+				<section>
+					<h2>Sequelize.js | 2</h2>
+
+					<p>Algumas Features</p>
+						<ul>
+							<li>Schema definition</li>
+							<li>Schema synchronization/dropping</li>
+							<li>1:1, 1:M & N:M Associations</li>
+							<li>Promises</li>
+							<li>Transactions</li>
+							<li>Migrations</li>
+							<li>CLI (sequelize-cli)</li>
+						</ul>
+
+
+				</section>
+
+
+				<!-- Async.js -->
+
+				<section>
+					<h2>Async.js | 1</h2>
+
+					<p>Livraria de funções que facilitam "domar" a assincronia.</p>
+
+					<p><strong>URL:</strong> <a href='https://github.com/caolan/async'>https://github.com/caolan/async</a></p>
+
+					<code>
+						$ npm install async
+					</code>
+				</section>
+
+				<section>
+					<h2>Async.js | 2</h2>
+
+					<ul>
+						<li>Versões async para map, reduce, filter, each</li>
+						<li>Outras patterns: series, parallel, waterfall</li>
+						<li>Seguem a convenção do Node.js em que o último argumento destas funções é um callback</li>
+					</ul>
+				</section>
+
+
+				<!-- Morgan  -->
+				<!--
+				<section>
+					<h2>Morgan</h2>
+
+					<p>Middleware de logging de informação para o express.</p>
+
+					<ul>
+						<li>Níveis de Log</li>
+						<li>Formato de log configuravel, plain text, json</li>
+						<li>Um ou vários ficheiros de log</li>
+						<li>Rotação dos ficheiros de logs</li>
+					</ul>
+
+					<p><strong>URL:</strong> <a href='https://github.com/expressjs/morgan'>https://github.com/expressjs/morgan</a></p>
+
+					<code>
+						$ npm install morgan
+					</code>
+				</section>
+			-->
+
+				<section>
+					<h2>Winston</h2>
+
+					<p>Middleware de logging de informação para o express.</p>
+
+					<ul>
+						<li>Níveis de Log</li>
+						<li>Formato de log configuravel, plain text, json</li>
+						<li>Um ou vários destinos de log</li>
+						<li>Rotação dos ficheiros de logs</li>
+						<li>Vários tipos destinos de logs (transports): console, ficheiros, http, Bases de dados</li>
+					</ul>
+
+					<p><strong>URL:</strong> <a href='https://github.com/winstonjs/winston'>https://github.com/winstonjs/winston</a></p>
+
+					<code>
+						$ npm install winston
+					</code>
+				</section>
+
+				<!-- Chokidar -->
+
+				<section>
+					<h2>Chokidar</h2>
+
+					<p>Wrapper que melhora as funções de watch de ficheiros do node.</p>
+
+					<ul>
+						<li>Executa callbacks para determinados eventos sobre ficheiros: add, change, unlink, addDir, unlinkDir, etc.</li>
+						<li>Bastante configuravel: followSymlinks, persistent, ignore, interval, depth,...</li>
+					</ul>
+
+					<p><strong>URL:</strong> <a href='https://github.com/paulmillr/chokidar'>https://github.com/paulmillr/chokidar</a></p>
+
+					<code>
+						$ npm install chokidar
+					</code>
+				</section>
+
+				<!-- BODY PARSER -->
+
+
+				<section>
+					<h2>Body-parser</h2>
+
+					<p>Middleware do Express que permite extrair dados do body de uma chamada http ao nosso servidor.</p>
+
+					<p>Pode ser utilizado para retirar do body:</p>
+
+					<ul>
+						<li>dados em Json</li>
+						<li>dados em formato texto</li>
+						<li>dados no formato Buffer do node.js. Pode conter imagens, videos, ficheiros comprimidos, etc.</li>
+					</ul>
+
+					<p><strong>URL:</strong> <a href='https://github.com/expressjs/body-parser'>https://github.com/expressjs/body-parser</a></p>
+
+					<code>
+						$ npm install body-parser
+					</code>
+				</section>
+
+
+				<section>
+					<h2>Busboy <small>(1)</small> e Connect-Busboy <small>(2)</small></h2>
+
+					<p>Modulo que permite fazer o parsing de dados oriundos de um formulário <small>(1)</small> e o middleware para express de ligação <small>(2)</small>.</p>
+
+					<ul>
+						<li>Parsing the forms multipart</li>
+						<li>Acesso aos ficheiros enviados no form</li>
+					</ul>
+
+					<p><strong>URL:</strong></p>
+					<ul>
+						<li><a href='https://github.com/mscdex/busboy'>https://github.com/mscdex/busboy</a></p></li>
+						<li><a href='https://www.npmjs.com/package/connect-busboy'>https://www.npmjs.com/package/connect-busboy</a></li>
+					</ul>
+
+					<code>
+						$ npm install busboy
+					</code>
+				</section>
+
+				<!-- connect flash -->
+
+				<section>
+					<h2>Connect-Flash</h2>
+
+					<p>Armazena mensagens em memória de sessão. Utiliza-se para apresentar informações entre de uma página para outra.</p>
+
+					<p>Exemplos:<p>
+
+					<ul>
+						<li>Mensagem de falha de autenticação</li>
+							<li>Mensagem de registo actualizado (ou não...)</li>
+					</ul>
+
+					<p><strong>URL:</strong>  <a href='https://github.com/jaredhanson/connect-flash'>https://github.com/jaredhanson/connect-flash</a></p>
+
+					<code>
+						$ npm install connect-flash
+					</code>
+				</section>
+
+
+				<section>
+					<h2>Express-Session</h2>
+
+					<p>Middleware que implementa a funcionalidade de Sessões similiar ao PHP</p>
+
+					<p>Exemplos:<p>
+
+					<ul>
+						<li>Mensagem de falha de autenticação</li>
+							<li>Mensagem de registo actualizado (ou não...)</li>
+					</ul>
+
+					<p><strong>URL:</strong>  <a href='https://github.com/expressjs/session'>https://github.com/expressjs/session</a></p>
+
+					<code>
+						$ npm install express-session
+					</code>
+				</section>
+
+				<section>
+					<h2>Também...</h2>
+
+					<ul>
+						<li>Coffeescript</li>
+						<li>Mocha</li>
+						<li>Istanbul</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Fim</h2>
+
+					<h3>Questões? Dúvidas? ...</h3>
+				</section>
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
